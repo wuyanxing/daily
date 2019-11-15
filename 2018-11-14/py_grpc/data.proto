@@ -1,0 +1,16 @@
+syntax = "proto3";
+package example;
+service template {
+	rpc say(Person) returns (Status){}
+}
+
+message Person {
+	string name = 1;
+	string age = 2;
+	string phone = 3;
+}
+
+message Status {
+	string status = 1;
+	bool ok = 2;
+}
